@@ -34,13 +34,7 @@ namespace :check do
   desc "Spell check the document"
   task :spell do
     puts "Checking the file for spelling mistakes... [#{TEX_NAME}]"
-    if command? :aspell
-      aspell "check", "--mode=tex", TEX_NAME
-    else
-      puts ">> aspell not installed, please install it with a useful dictionary."
-      puts
-      puts "    $ brew install aspell --lang=en"
-    end
+    aspell "check", "--mode=tex", TEX_NAME
   end
 end
 
