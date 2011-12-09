@@ -8,3 +8,5 @@
 *.blg
 *.toc
 *.pdf
+
+!styles/*.pdf
