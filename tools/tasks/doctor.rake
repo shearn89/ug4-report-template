@@ -17,8 +17,30 @@ def check_for(program)
   installed
 end
 
+def os?
+  case RUBY_PLATFORM
+    when /darwin/i
+      :osx
+    when /linux/i
+      :linux
+  end
+end
+
+def full_name
+  case os?
+  when :osx then `osascript -e "long user name of (system info)"`.chomp
+  when :linux then `getent passwd $USER | cut -d ":" -f 5 | tr -d ","`.chomp
+  end
+end
+
+def first_name
+  full_name.split.first
+end
+
 desc "Check your system for missing dependencies"
 task :doctor do
+  puts ">>> Right then #{first_name}, let's see if everything's shiny."
+  
   ok = true
   
   ok && check_for(:xelatex)
