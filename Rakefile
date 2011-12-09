@@ -2,6 +2,7 @@ require 'rake/clean'
 
 # Configuration
 NAME = "report"
+
 TEX_EXEC = "xelatex"
 
 # Semi-Configuration
@@ -17,11 +18,18 @@ task :default => [:build, :clean]
 
 desc "Build the document"
 task :build do
-  puts "Building the PDF... [#{TEX_NAME} => #{PDF_NAME}]"
-  latex DEFAULT_ARGS, TEX_NAME
-  `bibtex #{NAME}`
-  latex DEFAULT_ARGS, TEX_NAME
-  latex DEFAULT_ARGS, TEX_NAME
+  begin
+    puts "Building the PDF... [#{TEX_NAME} => #{PDF_NAME}]"
+    latex DEFAULT_ARGS, TEX_NAME
+    `bibtex #{NAME}`
+    latex DEFAULT_ARGS, TEX_NAME
+    latex DEFAULT_ARGS, TEX_NAME
+  rescue
+    puts "There was a problem: check that 'xelatex' and 'bibtex' are in your path:"
+    puts "The following executables were found:"
+    puts "Xelatex:\t"+`locate '*/xelatex'`.match(/\S*\/bin\/\S*\/xelatex/).to_s+"\n"
+    puts "Bibtex :\t"+`locate '*/bibtex'`.match(/\S*\/bin\/\S*\/bibtex/).to_s
+  end
 end
 
 desc "Show the document"
