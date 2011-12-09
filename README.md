@@ -32,4 +32,4 @@ Chris
 
 * `rake clean` - Remove any temporary products.
 * `rake clobber` - Remove any generated file.
-* `rake word_count` - Count the number of words in the document.
+* `rake count` - Count the number of words in the document.
