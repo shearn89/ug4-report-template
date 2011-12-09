@@ -1,23 +1,41 @@
-\documentclass[parskip]{styles/cs4rep}
+\documentclass[bsc,logo]{styles/infthesis}
+
+% Project Details
+% Change these!
+\title{Database Visualisation}
+\author{Christopher Brown}
+\course{Computer Science}
+\project{4th Year Project Report}
+
+\submityear{2012}
+\graduationdate{July 2012}
+\date{\today}
+
+\include{sections/abstract}
+
+% Extra Package Commands
 
 \begin{document}
+  \begin{preliminary}
+    % Title Page
+    \maketitle
   
-  % Project Details
-  \title{!Project Name!}
-  \author{!Your Name!}
-  \degree{!Your Degree!}
-  \project{4th Year Project Report}
-  \date{\today}
-
-  % Title Page
-  \include{sections/abstract}
-  \maketitle
-  
-  % Preamble
-  \include{sections/misc/acknowledgements}
-  \tableofcontents
+    % Preamble
+    \include{sections/misc/acknowledgements}
+    \standarddeclaration
+    \tableofcontents
+  \end{preliminary}
 
   % Chapters
   \include{sections/intro}
   \include{sections/cool_story}
+  
+  % Appendix
+  \appendix
+  
+  %\include...
+  
+  % Bibliography
+  \bibliographystyle{apalike}
+  \bibliography{refs/bibliography}
 \end{document}

@@ -9,4 +9,4 @@
 *.toc
 *.pdf
 
-!styles/*.pdf
+!styles/**/*.pdf

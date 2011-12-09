@@ -54,7 +54,7 @@
 \RequirePackage{ifthen,%  
     graphics,%
     xspace,
-    eushield}
+    styles/logos/eushield}
 
 
 %%%% The following packages are also used but are included further on rather
