@@ -22,7 +22,7 @@ Chris
 ### Checker Tasks
 
 * `rake check` - Check the document for common errors.
-* `rake check:duplicates - Check the document for accidental duplicate words.
+* `rake check:duplicates` - Check the document for accidental duplicate words.
 * `rake check:passive` - Check the document for passive speech.
 * `rake check:spell` - Spell check the document.
 * `rake check:syntax` - Check the document for syntax errors.
