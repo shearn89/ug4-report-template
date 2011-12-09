@@ -13,6 +13,14 @@ Feel free to fork this project and start adding your wonderful words to the repo
 Thanks,
 Chris
 
+## Getting Started
+
+Run `rake doctor` to find any potential missing dependencies on your system. To do this you're going to need [Rake](http://rake.rubyforge.org/). It can be installed with:
+
+    gem install rake
+
+If this doesn't work then you'll need to install [Ruby](http://ruby-lang.org).
+
 ## Rake Commands
 
 * `rake` - This will build the document and clean up any temporary files.
