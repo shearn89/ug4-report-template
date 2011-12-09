@@ -33,6 +33,8 @@ Run `rake doctor` to find any potential missing dependencies on your system. To 
 
 If this doesn't work then you'll need to install [Ruby](http://ruby-lang.org).
 
+Next, you're going to want to open up `report.tex` and change the details at the top to be yours. I'd love it if you all submitted your thesis as me but I don't think that it would be looked too kindly upon.
+
 ## Rake Commands
 
 * `rake` - This will build the document and clean up any temporary files.
