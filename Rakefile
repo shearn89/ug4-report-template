@@ -8,7 +8,7 @@ TEX_EXEC = "xelatex"
 # Semi-Configuration
 PDF_NAME = "#{NAME}.pdf"
 TEX_NAME = "#{NAME}.tex"
-DEFAULT_ARGS = "-shell-escape -interaction=nonstopmode"
+DEFAULT_ARGS = "-shell-escape -interaction=nonstopmode -papersize=a4"
 
 # Cleaning FileLists
 CLEAN.include(['**/*.aux', '*.log', '*.out', '*.pyg', '*.bak', '*.toc', '*.bbl', '*.blg', '*.toc'])
