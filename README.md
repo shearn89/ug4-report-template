@@ -1,6 +1,6 @@
 # UG4 Project Report Template
 
-![Lazy College Senior Report](http://i.qkme.me/35g76w.jpg)
+![Lazy College Senior Report](http://i.qkme.me/35g8s8.jpg)
 
 ## Motivation
 
