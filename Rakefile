@@ -6,7 +6,7 @@ TEX_NAME = "#{NAME}.tex"
 TEX_EXEC = "xelatex"
 
 # Cleaning FileLists
-CLEAN.include(['*.aux', '*.log', '*.out', '*.pyg', '*.bak', '*.toc', '*.bbl', '*.blg', '*.toc'])
+CLEAN.include(['**/*.aux', '*.log', '*.out', '*.pyg', '*.bak', '*.toc', '*.bbl', '*.blg', '*.toc'])
 CLOBBER.include('*.pdf')
 
 # Dependency FileLists
