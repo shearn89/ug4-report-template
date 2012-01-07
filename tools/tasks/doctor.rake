@@ -23,6 +23,8 @@ def os?
       :osx
     when /linux/i
       :linux
+    when /win32/i
+      :win
   end
 end
 
@@ -30,6 +32,7 @@ def full_name
   case os?
   when :osx then `osascript -e "long user name of (system info)"`.chomp
   when :linux then `getent passwd $USER | cut -d ":" -f 5 | tr -d ","`.chomp
+  when :win then "Informatician"
   end
 end
 
