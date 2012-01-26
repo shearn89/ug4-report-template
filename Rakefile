@@ -28,7 +28,7 @@ end
 desc "Show the document"
 task :view => [PDF_NAME] do
   puts "Opening the PDF... [#{PDF_NAME}]"
-  ["open", "okular", "kpdf", "acroread"].find do |viewer|
+  ["open", "okular", "kpdf", "acroread", "start"].find do |viewer|
     command viewer, PDF_NAME
   end or
   puts "Unable to find any pdf viewer."
