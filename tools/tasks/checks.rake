@@ -41,6 +41,6 @@ end
 desc "Count the number of words in the document"
 task :word_count do
   puts "Counting the words in the document... [#{TEX_NAME}]"
-  perl "tools/texcount.pl", TEX_NAME
+  perl "tools/texcount.pl", "sections/*"
 end
 task :count => [:word_count]
